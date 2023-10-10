@@ -1,0 +1,57 @@
+.schedule{
+
+  &__header{
+    display: inline-block;
+    border-bottom: 4px solid $font-color;
+    h1{
+      font-size: 41px;
+      padding-right: 25px;
+      margin-bottom: 20px;
+      color: $font-color;
+      line-height: 50.1px;
+    }
+  }
+}
+
+.table-schedule {
+  margin-top: 40px;
+	width: 100%;
+	margin-bottom: 20px;
+	border: 5px solid #fff;
+	border-top: 5px solid #fff;
+	border-bottom: 3px solid #fff;
+	border-collapse: collapse; 
+	outline: 3px solid $font-color;
+	font-size: 15px;
+	background: #fff!important;
+}
+.table-schedule th {
+	font-weight: bold;
+	padding: 12px 7px;
+	background: $font-color;
+	border: none;
+	text-align: center;
+	font-size: 18px;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid $font-color;
+  color: white;
+}
+.table-schedule td {
+	padding: 7px;
+	border: none;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	font-size: 15px;
+  text-align: center;
+}
+.table-schedule tbody tr:nth-child(even){
+	background: #f8f8f8!important;
+}
+
+
+
+@media(max-width:500px){
+  .schedule{
+    overflow: scroll;
+  }
+}

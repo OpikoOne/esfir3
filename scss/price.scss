@@ -1,0 +1,268 @@
+// Header
+
+.width-2{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+}
+
+.active{
+  display: block;
+}
+
+
+// PRICE///////////////////////////////////////////////////////////////////////
+.price{
+  &__header{
+    display: inline-block;
+    border-bottom: 4px solid $font-color;
+    h1{
+      font-size: 41px;
+      padding-right: 25px;
+      margin-bottom: 20px;
+      color: $font-color;
+    }
+  }
+
+  &__descr{
+    h3{
+      margin-top: 65px;
+      color: $font-color;
+      font-size: 27px;
+    }
+
+    p{
+      margin-top: 20px;
+      font-size: 18px;
+
+    }
+  }
+
+  &__container{
+    margin-top: 35px;
+  }
+
+  &__base {
+    cursor: pointer;
+    z-index: 20;
+
+    .price__block {
+      @media (hover: hover) {
+        &:hover {
+          .price__toggle {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    &.active {
+      .price__toggle {
+        i {
+          &:nth-child(1) {
+            width: 0;
+          }
+        }
+      }
+
+      .price__addition {
+        display: block;
+      }
+    }
+  }
+
+  &__block{
+    display: flex;
+    justify-content: space-between;
+    background-color: $font-color;
+    color: white;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    z-index: 1000;
+  }
+
+  &__block-descr{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+
+    p{
+      font-size: 22px;
+    }
+
+    &_img{
+      width: 25px;
+      height: 20px;
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease-in-out;
+
+    i {
+      position: absolute;
+      z-index: 2;
+      width: 70%;
+      height: 1px;
+      top: 50%;
+      bottom: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      background: white;
+      transition: width 0.3s ease-in-out;
+
+      &:first-child {
+        transform: rotate(90deg);
+      }
+
+      &:last-child {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &__addition{
+    display: none;
+    padding: 0 15px;
+
+    &_base{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      cursor: pointer;
+
+      &.active{
+        .price__addition_block--icon {
+          i {
+            &:nth-child(1){
+              width: 0;
+            }
+          }
+        }
+
+        .table{
+          display: table;
+        }
+      }
+    }
+
+    .price__addition_block {
+      @media (hover: hover) {
+        &:hover {
+          .price__addition_block--icon {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    &.active{
+      .price__addition_block--icon {
+        i {
+          &:nth-child(1){
+            width: 0;
+          }
+        }
+      }
+    }
+
+    &_block{
+      display: flex;
+      justify-content: space-between;
+      background-color: $font-color;
+      color: white;
+      padding: 15px 10px;
+      
+
+      &--descr{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+
+        p{
+          font-size: 18px;
+        }
+      }
+
+      &--icon{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        transition: transform 0.3s ease-in-out;
+
+        i {
+          position: absolute;
+          z-index: 2;
+          width: 70%;
+          height: 1px;
+          top: 50%;
+          bottom: 50%;
+          transform: translate(-50%, -50%);
+          display: block;
+          background: white;
+          transition: width 0.3s ease-in-out;
+
+          &:first-child {
+            transform: rotate(90deg);
+          }
+
+          &:last-child {
+            transform: rotate(0deg);
+          }
+        }
+      }  
+    }
+
+
+
+    .table{
+      display: none;
+      table-layout: fixed;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+
+    .table th:first-child{
+      width: 90%;
+      text-align: left;
+    }
+
+    .table td:last-child{
+      text-align: center;
+    }
+    .table th {
+      font-weight: bold;
+      padding: 5px;
+      background: #efefef;
+    }
+    .table td{
+      padding: 5px 10px;
+      text-align: left;
+    }
+    .table tbody tr:nth-child(odd){
+      background: #fff;
+    }
+    .table tbody tr:nth-child(even){
+      background: #F7F7F7;
+    }
+    .bold{
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+  
+}

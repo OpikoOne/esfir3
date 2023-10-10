@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/head.html',{
+	"title":"Контакти"
+	})
+	<body>
+		@@include('html/header.html',{})
+		<main>
+			<div class="container-price">
+				<section class="s1">
+          <div class="banner">
+            <div class="banner__container width-2">
+							<div class="banner__container_header">
+								<h2>Контакти</h2>
+							</div>
+						</div>
+          </div>
+					<div class="breadcrumb">
+						<div class="breadcrumb__container width-2">
+							<p><a href="index.html">Головна</a></з>
+						</div>
+					</div>
+        </section>
+        <section class="s2 width-2">
+          <div class="contact">
+            <h2 class="contact__header">Медичний заклад "Центр здоров'я"</h2>
+            <div class="contact__container">
+              <div class="contact__location">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6130.266281078215!2d29.231776875426302!3d48.68830656946408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cd714ba226fd49%3A0x3acc3e63b1dd7e3d!2z0KbQtdC90YLRgCDQt9C00L7RgNC-0LIn0Y8!5e0!3m2!1sru!2sua!4v1696575172861!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="contact__info">
+                <div class="contact__block">
+                  <span>
+                    <img src="./img/Group.png" alt="">
+                  </span>
+                  <h4>Адреса</h4>
+                  <ul>
+                    <li>вул. П.Кравчика 17</li>
+                    <li>м.Ладижин 24320,</li>
+                    <li>Україна</li>
+                  </ul>
+                </div>
+                <div class="contact__block">
+                  <span>
+                    <img src="./img/contact-main.png" alt="">
+                  </span>
+                  <h4>Контакти</h4>
+                  <ul>
+                    <li>+38 (068) 548-28-54</li>
+                    <li>+38 (097) 882-25-73</li>
+                    <li>centrzdorovia17@gmail.com</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+		@@include('html/footer.html',{})
+		<div class="modal hide-modal">
+			<div class="modal__dialog">
+					<div class="modal__content">
+							<form action="#">
+									<div data-close class="modal__close">&times;</div>
+									<div class="modal__title">Ми зв'яжемось з вами</div>
+									<input required placeholder="Ваше ім'я" name="name" type="text" class="modal__input">
+									<input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
+									<button data-close class="modal__btn">Перезвонить мені</button>
+							</form>
+					</div>
+			</div>
+		</div>
+		<script src="js/app.min.js"></script>
+	</body>
+</html>

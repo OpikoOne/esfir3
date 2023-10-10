@@ -1,0 +1,441 @@
+$font-color: #59669A;
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 7px 0 0 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  background-color: white;
+  transition: 0.3s;
+
+
+
+ // Верхня шапка
+  &__top{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 85px;
+  border-bottom: 1px solid rgb(159, 158, 158);
+  padding: 6px 40px;
+  position: relative;
+  z-index: 3;
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-around;
+    gap: 45px;
+  }
+
+
+
+  // Тіло
+
+  &__body {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 120px;
+    align-items: center;
+    padding: 7px 0px 7px 0px;
+    background-color: white;
+  }
+
+
+
+  &__logo {
+    position: relative;
+    z-index: 3;
+    &_link {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 20px;
+      font-weight: 900;
+      color: $font-color;
+      text-transform: uppercase;
+    }
+
+    & img {
+      width: 50px;
+    }
+  }
+
+  // Бургер
+  &__burger {
+    display: none;
+  }
+
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: #fff;
+  //   z-index: 2;
+  //   box-shadow: 0px 0px 4px grey;
+  // }
+
+  &__right-block{
+    &_btn {
+      padding: 12px;
+      background-color: $font-color;
+      color: white;
+      font-size:16px;
+      font-weight:500;
+      border:1px solid rgba(0,0,0,.2);
+      cursor:pointer;
+      transition:.5s all;
+      outline:0;
+      position: relative;
+      z-index: 3;
+
+      &:hover{
+        box-shadow: 4px 4px rgba(85, 85, 85, 0.4);
+      }
+    }
+  }
+
+}
+
+.header-info {
+  display: flex;
+  gap: 5px;
+  color: #7c7b7b;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  &__icon{
+    img {
+      width: 16px;
+      padding: 6px 0px 0px 0px;
+    }
+  }
+}
+
+
+.menu {
+  &__list{
+    display: flex;
+    position: relative;
+    z-index: 3;
+    gap: 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__item{
+    cursor: pointer;
+  }
+
+  &__link {
+    transition: 0.3s;
+
+    &:hover{
+      color: $font-color;
+    }
+  }
+}
+
+
+
+.scroll {
+  display: none;
+  box-shadow: 0px 0px 0px 4px gray;
+
+}
+
+.facebook {
+  width: 30px;
+}
+
+.dropdown{
+  
+  &__descr{
+    display: flex;
+    gap: 4px;
+    transition: 0.3s;
+  }
+  
+
+  & img {
+    width: 8px;
+    height: 8px;
+    align-items: center;
+    margin-top: 7px;
+  }
+
+  &:hover{
+    color: $font-color;
+
+    & .dropdown-menu{
+      display: block;
+    }
+  }
+  
+}
+
+.dropdown-menu{
+  display: none;
+  position:absolute;
+  left: 20%;
+  padding-top: 1%;
+  color: #fff;
+  
+  &_item{
+    font-size: 16px;
+    text-transform: none;
+    padding: 10px 40px 10px 15px;
+    background-color: $font-color;
+
+    &:hover{
+      background-color: #3a4364;
+    }
+  }
+}
+
+
+@media (max-width:1024px) {
+  .header{
+    padding: 0px 0px 0px 0px;
+
+    &__body{
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 65px;
+    }
+    &__top{
+      display: flex;
+      gap: 0px;
+      padding: 10px 7px 7px 7px;
+    }
+
+    &__logo{
+      font-size: 20px;
+      & img{
+        width: 45px;
+      }
+
+
+    }
+  }
+
+  .menu{
+    &__list {
+      font-size: 15px;
+      gap: 20px;
+    }
+  }
+
+
+}
+
+
+
+
+@media (max-width:768px){
+  body.lock {
+    overflow: hidden;
+  }
+  .header{
+    display: block;
+    padding: 5px 5px 5px 5px;
+
+    &.active{
+      box-shadow: 0px 0px 4px grey;
+    }
+
+    &__top{
+      display: none;
+    }
+
+    &__body{
+      display: flex;
+      justify-content: space-between;
+      gap: 0;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+
+    &__burger {
+      display: flex;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      z-index: 2;
+      cursor: pointer;
+  
+      & span{
+        position: absolute;
+        background-color: black;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 10px;
+        transition: all 0.3s ease 0s;
+      }
+      
+      &:before{
+        content: '';
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 2px;
+        transition: all 0.3s ease 0s;
+      }
+  
+      &:after{
+        content: '';
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 19px;
+        transition: all 0.3s ease 0s;
+      }
+      
+      &.active:before {
+        transform: rotate(142deg);
+        top: 9px;
+      }
+  
+      &.active:after {
+        transform: rotate(45deg);
+        top: 9px;
+      }
+  
+      &.active span {
+        transform: scale(0);
+      }
+    }
+
+    &__logo{
+      padding: 0 0 0 45px;
+    }
+    &__right-block{
+      
+      &_btn{
+        font-size: 15px;
+        padding: 10px;
+      }
+    }
+
+    .dropdown-menu{
+      position:static;
+      width: 100%;
+      left: 0;
+      padding: 0;
+
+      &_item{
+        color: black;
+        background-color: white;
+
+        &:hover{
+          color: $font-color;
+        }
+      }
+    }
+  }
+
+  .menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+    padding: 70px 10px 20px 10px;
+    transition: all 0.4s ease 0s;
+
+    &__list {
+      display: block;
+    }
+
+    &__item{
+      margin: 0px 0px 20px 0px;
+      border-bottom: 1px solid black;
+      padding-bottom: 10px;
+
+      &:hover{
+        color: $font-color;
+      }
+    }
+
+    &.active {
+      top: 8%;
+    }
+    
+  }
+
+  
+}
+
+
+@media (max-width: 480px) {
+  .header{
+
+    &__top{
+      display: none;
+    }
+
+    &__body{
+      display: flex;
+      justify-content: flex-start;
+      gap: 72px;
+      padding-left: 5px;
+    }
+
+    &__burger{
+      width: 25px;
+      height: 15px;
+    }
+
+
+    &__logo{
+      padding: 0 0 0 0;
+      &_link{
+        font-size: 16px;
+      }
+    }
+
+    &__right-block{
+      display: none;
+    }
+  }
+}
+
+@media(max-width:380px) {
+  .header{
+
+    &__body{
+      display: flex;
+      justify-content: flex-start;
+      gap: 55px;
+      padding-left: 5px;
+    }
+
+    
+
+
+    &__logo{
+      padding: 0 0 0 0;
+      &_link{
+        font-size: 16px;
+      }
+    }
+  }
+}
+  
+

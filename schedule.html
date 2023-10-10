@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/head.html',{
+	"title":"Графік роботи та прийому"
+	})
+	<body>
+		@@include('html/header.html',{})
+		<main>
+      <section class="s1">
+        <div class="banner">
+          <div class="banner__container width-2">
+            <div class="banner__container_header">
+              <h2>Графік прийому</h2>
+            </div>
+          </div>
+        </div>
+        <div class="breadcrumb">
+          <div class="breadcrumb__container width-2">
+            <p><a href="index.html">Головна</a></з>
+          </div>
+        </div>
+      </section>
+      <section class="s2 width-3">
+        <div class="schedule">
+          <div class="schedule__header">
+            <h1>Графік прийому</h1>
+          </div>
+          <table class="table-schedule">
+            <thead>
+              <tr>
+               
+                <th>Спеціалізація</th>
+                <th>Пн</th>
+                <th>Bт</th>
+                <th>Ср</th>
+                <th>Чт</th>
+                <th>Пт</th>
+                <th>Сб</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Лікар УЗД, лікар-рентгенолог</td>
+                <td>8:30 - 15:30</td>
+                <td>8:30 - 15:30</td>
+                <td>8:30 - 15:30</td>
+                <td>8:30 - 15:30</td>
+                <td>8:30 - 15:30</td>
+                <td>8:00 - 12:00</td>
+              </tr>
+              <tr>
+                <td>Лікар-кардіолог</td>
+                <td>9:30 - 12:00</td>
+                <td>9:30 - 12:00</td>
+                <td>9:30 - 12:00</td>
+                <td>9:30 - 12:00</td>
+                <td>9:30 - 12:00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Лікар-травматолог</td>
+                <td></td>
+                <td>11:00 - 16:00</td>
+                <td></td>
+                <td>11:00 - 16:00</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Лікар-хірург</td>
+                <td>9:00 - 12:00</td>
+                <td></td>
+                <td></td>
+                <td>9:00 - 12:00</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Лікар-оториноларинголог</td>
+                <td></td>
+                <td></td>
+                <td>16:00 - 19:00</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Лікар-терапевт</td>
+                <td>16:00 - 17:00</td>
+                <td>16:00 - 17:00</td>
+                <td>16:00 - 17:00</td>
+                <td>16:00 - 17:00</td>
+                <td>16:00 - 17:00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Лікар-гінеколог, лікар-гінеколог УЗД</td>
+                <td></td>
+                <td>16:00 - 17:00</td>
+                <td>16:00 - 19:00</td>
+                <td>16:00 - 17:00</td>
+                <td></td>
+                <td>9:00 - 11:00</td>
+              </tr>
+              <tr>
+                <td>Збір аналізів</td>
+                <td>8:15 - 11:00</td>
+                <td>8:15 - 11:00</td>
+                <td>8:15 - 11:00</td>
+                <td>8:15 - 11:00</td>
+                <td>8:15 - 11:00</td>
+                <td>8:15 - 9:30</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </section>
+		</main>
+    @@include('html/footer.html',{})
+    <div class="modal hide-modal">
+			<div class="modal__dialog">
+					<div class="modal__content">
+							<form action="#">
+									<div data-close class="modal__close">&times;</div>
+									<div class="modal__title">Ми зв'яжемось з вами</div>
+									<input required placeholder="Ваше ім'я" name="name" type="text" class="modal__input">
+									<input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
+									<button data-close class="modal__btn">Перезвонить мені</button>
+							</form>
+					</div>
+			</div>
+		</div>
+		<script src="js/app.min.js"></script>
+	</body>
+</html>
